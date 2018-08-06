@@ -1,0 +1,59 @@
+<%= form_with(model: recipe, local: true) do |form| %>
+  <% if recipe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
+
+      <ul>
+      <% recipe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+   <div class="field">
+    <%= form.label :category_id %>
+    <%= form.select(:category_id, @categories.collect{ |c| [c.name, c.id]}, {include_blank: "Select Category"}, required: true) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ingredients %>
+    <%= form.text_area :ingredients %>
+  </div>
+
+  <div class="field">
+    <%= form.label :directions %>
+    <%= form.text_area :directions %>
+  </div>
+
+  <div class="field">
+    <%= form.label :song %>
+    <%= form.text_area :song %>
+  </div>
+
+  <div class="field">
+    <%= form.label :keyword %>
+    <%= form.text_area :keyword %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

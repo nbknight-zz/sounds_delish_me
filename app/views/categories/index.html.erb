@@ -1,0 +1,33 @@
+
+<!-- will need to link the images to the category partial -->
+
+
+<div class="grid-container">
+  <div class="title">
+  <%=image_tag("mainlogo.png")%>
+  </div>
+  <% @categories.each do |category| %>
+  <div class="aps">
+    <%= link_to image_tag("apps.png", size: "200x200"), categorical_path(cat_id: category.id = 1) %>
+  </div>
+  <div class="diner">
+    <%= link_to image_tag("dinner.png", size: "200x200"), categorical_path(cat_id: category.id = 2)%>
+  </div>
+  <div class="breakfast">
+    <%= link_to image_tag("breakfast.png", size: "200x200"), categorical_path(cat_id: category.id = 3)%>
+  </div>
+  <div class="desert">
+    <%= link_to image_tag("dessert.png", size: "200x200"), categorical_path(cat_id: category.id = 4)%>
+  </div>
+  <div class="drinks">
+    <%= link_to image_tag("drinks.png", size: "200x200"), categorical_path(cat_id: category.id = 5)%>
+  </div>
+  <% end %>
+  <div class="mainlogo">
+  <span class="typed"><p id="typer"></p> </span>
+  <span class="typed"><p id="backtyper"></p> </span>
+  </div>
+  <!-- <div class="mainlogo">
+  <%=image_tag("design.png") %>
+  </div> -->
+</div>

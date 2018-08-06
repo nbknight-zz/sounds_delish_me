@@ -1,0 +1,31 @@
+
+<nav>
+  <div id="nav-logo">
+    <%= link_to root_path do %>
+     <%=image_tag("sdlogo2.png", size: "50x50")%>
+  <% end %>
+ </div>
+  <div class="category">
+   <span> CATEGORIES </span>
+   <div class="category-content">
+
+    <% counter = 0 %>
+    <% @categories.each do |category| %>
+    <% counter += 1 %>
+      <li><%= link_to category.name, categorical_path(cat_id: category.id = counter) %></li>
+    <% end %>
+
+
+
+   </div>
+ </div>
+
+  <div class="tags">
+    <span> TAGS <i class="fa fa-hashtag" aria-hidden="true"></i></span>
+    <div class="tags-content">
+    <% @tag.each do |tag| %>
+      <li><%= link_to tag.phrase, tag_recipes_path(tag_id: tag.id) %></li>
+    <% end %>
+    </div>
+  </div>
+</nav>
