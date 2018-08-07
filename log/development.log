@@ -29036,3 +29036,1167 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-08-06 19:52:35 -0400
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/sammyknight/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (2.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:9
+  Rendered categories/index.html.erb within layouts/application (586.2ms)
+  [1m[36mTag Load (1.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/layouts/_navbar.html.erb:26
+  Rendered layouts/_navbar.html.erb (12.8ms)
+Completed 200 OK in 844ms (Views: 806.3ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/path/to/font-awesome/css/font-awesome.min.css" for 127.0.0.1 at 2018-08-06 19:52:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/categorical?cat_id=5" for 127.0.0.1 at 2018-08-06 19:52:39 -0400
+Processing by CategoriesController#recipes_by_category as HTML
+  Parameters: {"cat_id"=>"5"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:56
+  [1m[36mRecipe Load (2.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/categories_controller.rb:60
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  Rendering categories/recipes_by_category.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 25], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Blob Load (1.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 26], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 27], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 79], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 28], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 29], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 30], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  Rendered categories/recipes_by_category.html.erb within layouts/application (103.1ms)
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/layouts/_navbar.html.erb:13
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/layouts/_navbar.html.erb:26
+  Rendered layouts/_navbar.html.erb (12.0ms)
+Completed 200 OK in 312ms (Views: 225.2ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBVdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--99f4ac022fdf1c6bd3847f8bfb7cf43c7d84585c/hotapplecider.jpg" for 127.0.0.1 at 2018-08-06 19:52:40 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBVdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--99f4ac022fdf1c6bd3847f8bfb7cf43c7d84585c", "filename"=>"hotapplecider"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ /Users/sammyknight/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (8.6ms) [0m[34mGenerated URL for file at key: ycAAKsKrP4gKbAn7QjmHgSGb (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDE1WTBGQlMzTkxjbEEwWjB0aVFXNDNVV3B0U0dkVFIySUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDAuMjMwWiIsInB1ciI6ImJsb2Jfa2V5In19--977737ba66ab8f69aec700645f1c9b93f5abab58/hotapplecider.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22hotapplecider.jpg%22%3B+filename%2A%3DUTF-8%27%27hotapplecider.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDE1WTBGQlMzTkxjbEEwWjB0aVFXNDNVV3B0U0dkVFIySUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDAuMjMwWiIsInB1ciI6ImJsb2Jfa2V5In19--977737ba66ab8f69aec700645f1c9b93f5abab58/hotapplecider.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22hotapplecider.jpg%22%3B+filename%2A%3DUTF-8%27%27hotapplecider.jpg
+Completed 302 Found in 15ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/path/to/font-awesome/css/font-awesome.min.css" for 127.0.0.1 at 2018-08-06 19:52:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDE1WTBGQlMzTkxjbEEwWjB0aVFXNDNVV3B0U0dkVFIySUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDAuMjMwWiIsInB1ciI6ImJsb2Jfa2V5In19--977737ba66ab8f69aec700645f1c9b93f5abab58/hotapplecider.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22hotapplecider.jpg%22%3B+filename%2A%3DUTF-8%27%27hotapplecider.jpg" for 127.0.0.1 at 2018-08-06 19:52:40 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9690b9dfb749d05307144dda20879c0f31541ec6/greenmonstersmoothie.jpg" for 127.0.0.1 at 2018-08-06 19:52:41 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBWUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3b6ee4cbb32aa4b049cbc65f2329a2af491fc58a/sangria.jpg" for 127.0.0.1 at 2018-08-06 19:52:41 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBXQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b8cd51cf2cf195d99c9d3010172a780ad868f839/bloodymary.jpg" for 127.0.0.1 at 2018-08-06 19:52:41 -0400
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"hotapplecider.jpg\"; filename*=UTF-8''hotapplecider.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDE1WTBGQlMzTkxjbEEwWjB0aVFXNDNVV3B0U0dkVFIySUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDAuMjMwWiIsInB1ciI6ImJsb2Jfa2V5In19--977737ba66ab8f69aec700645f1c9b93f5abab58", "filename"=>"hotapplecider"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBWdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b93468c50a6822211049019c199aa7785a441181/champagnepeachpunch.jpg" for 127.0.0.1 at 2018-08-06 19:52:41 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9690b9dfb749d05307144dda20879c0f31541ec6", "filename"=>"greenmonstersmoothie"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBWdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b93468c50a6822211049019c199aa7785a441181", "filename"=>"champagnepeachpunch"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ /Users/sammyknight/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBWUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3b6ee4cbb32aa4b049cbc65f2329a2af491fc58a", "filename"=>"sangria"}
+[36m  Disk Storage (8.1ms) [0m[34mDownloaded file from key: ycAAKsKrP4gKbAn7QjmHgSGb[0m
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 79], ["LIMIT", 1]]
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBXQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b8cd51cf2cf195d99c9d3010172a780ad868f839", "filename"=>"bloodymary"}
+[36m  Disk Storage (1.1ms) [0m[34mGenerated URL for file at key: BvaTJJHvvedGXK2WpLWKuT45 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFDZG1GVVNrcElkblpsWkVkWVN6SlhjRXhYUzNWVU5EVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDEuMDc3WiIsInB1ciI6ImJsb2Jfa2V5In19--bbef507e0025854c595ad5e3fa580b4655c1c861/champagnepeachpunch.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22champagnepeachpunch.jpg%22%3B+filename%2A%3DUTF-8%27%27champagnepeachpunch.jpg)[0m
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  Rendering text template
+  ↳ /Users/sammyknight/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 83], ["LIMIT", 1]]
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFDZG1GVVNrcElkblpsWkVkWVN6SlhjRXhYUzNWVU5EVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDEuMDc3WiIsInB1ciI6ImJsb2Jfa2V5In19--bbef507e0025854c595ad5e3fa580b4655c1c861/champagnepeachpunch.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22champagnepeachpunch.jpg%22%3B+filename%2A%3DUTF-8%27%27champagnepeachpunch.jpg
+  ↳ /Users/sammyknight/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendered text template (0.0ms)
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: 2SBq9WTHSEFk1JjqSU1QwRHm (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDB5VTBKeE9WZFVTRk5GUm1zeFNtcHhVMVV4VVhkU1NHMEdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDEuMDg4WiIsInB1ciI6ImJsb2Jfa2V5In19--02f119cf38db5fb0ed39e52960fef324d5cccc74/greenmonstersmoothie.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22greenmonstersmoothie.jpg%22%3B+filename%2A%3DUTF-8%27%27greenmonstersmoothie.jpg)[0m
+  ↳ /Users/sammyknight/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 302 Found in 17ms (ActiveRecord: 0.4ms)
+
+
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: F6Wj1waMzwetYYrtq7Wf3HJM (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFHTmxkcU1YZGhUWHAzWlhSWldYSjBjVGRYWmpOSVNrMEdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDEuMDkwWiIsInB1ciI6ImJsb2Jfa2V5In19--78779b9a92cc11c9f233b9ea8c65aae5a0b2b5d9/sangria.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22sangria.jpg%22%3B+filename%2A%3DUTF-8%27%27sangria.jpg)[0m
+Sent data  (10.4ms)
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDB5VTBKeE9WZFVTRk5GUm1zeFNtcHhVMVV4VVhkU1NHMEdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDEuMDg4WiIsInB1ciI6ImJsb2Jfa2V5In19--02f119cf38db5fb0ed39e52960fef324d5cccc74/greenmonstersmoothie.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22greenmonstersmoothie.jpg%22%3B+filename%2A%3DUTF-8%27%27greenmonstersmoothie.jpg
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: Sn48tVfsUqdYJ4inxFejofvw (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFUYmpRNGRGWm1jMVZ4WkZsS05HbHVlRVpsYW05bWRuY0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDEuMDkyWiIsInB1ciI6ImJsb2Jfa2V5In19--7dee21f41bc01f0c26b4c0a91bbc9f0c296cc1d8/bloodymary.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22bloodymary.jpg%22%3B+filename%2A%3DUTF-8%27%27bloodymary.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFHTmxkcU1YZGhUWHAzWlhSWldYSjBjVGRYWmpOSVNrMEdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDEuMDkwWiIsInB1ciI6ImJsb2Jfa2V5In19--78779b9a92cc11c9f233b9ea8c65aae5a0b2b5d9/sangria.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22sangria.jpg%22%3B+filename%2A%3DUTF-8%27%27sangria.jpg
+Completed 200 OK in 35ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Completed 302 Found in 25ms (ActiveRecord: 0.2ms)
+
+
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFUYmpRNGRGWm1jMVZ4WkZsS05HbHVlRVpsYW05bWRuY0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDEuMDkyWiIsInB1ciI6ImJsb2Jfa2V5In19--7dee21f41bc01f0c26b4c0a91bbc9f0c296cc1d8/bloodymary.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22bloodymary.jpg%22%3B+filename%2A%3DUTF-8%27%27bloodymary.jpg
+Completed 302 Found in 18ms (ActiveRecord: 0.4ms)
+
+
+Completed 302 Found in 14ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFHTmxkcU1YZGhUWHAzWlhSWldYSjBjVGRYWmpOSVNrMEdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDEuMDkwWiIsInB1ciI6ImJsb2Jfa2V5In19--78779b9a92cc11c9f233b9ea8c65aae5a0b2b5d9/sangria.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22sangria.jpg%22%3B+filename%2A%3DUTF-8%27%27sangria.jpg" for 127.0.0.1 at 2018-08-06 19:52:41 -0400
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDB5VTBKeE9WZFVTRk5GUm1zeFNtcHhVMVV4VVhkU1NHMEdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDEuMDg4WiIsInB1ciI6ImJsb2Jfa2V5In19--02f119cf38db5fb0ed39e52960fef324d5cccc74/greenmonstersmoothie.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22greenmonstersmoothie.jpg%22%3B+filename%2A%3DUTF-8%27%27greenmonstersmoothie.jpg" for 127.0.0.1 at 2018-08-06 19:52:41 -0400
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFUYmpRNGRGWm1jMVZ4WkZsS05HbHVlRVpsYW05bWRuY0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDEuMDkyWiIsInB1ciI6ImJsb2Jfa2V5In19--7dee21f41bc01f0c26b4c0a91bbc9f0c296cc1d8/bloodymary.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22bloodymary.jpg%22%3B+filename%2A%3DUTF-8%27%27bloodymary.jpg" for 127.0.0.1 at 2018-08-06 19:52:41 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"greenmonstersmoothie.jpg\"; filename*=UTF-8''greenmonstersmoothie.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDB5VTBKeE9WZFVTRk5GUm1zeFNtcHhVMVV4VVhkU1NHMEdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDEuMDg4WiIsInB1ciI6ImJsb2Jfa2V5In19--02f119cf38db5fb0ed39e52960fef324d5cccc74", "filename"=>"greenmonstersmoothie"}
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"sangria.jpg\"; filename*=UTF-8''sangria.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFHTmxkcU1YZGhUWHAzWlhSWldYSjBjVGRYWmpOSVNrMEdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDEuMDkwWiIsInB1ciI6ImJsb2Jfa2V5In19--78779b9a92cc11c9f233b9ea8c65aae5a0b2b5d9", "filename"=>"sangria"}
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"bloodymary.jpg\"; filename*=UTF-8''bloodymary.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFUYmpRNGRGWm1jMVZ4WkZsS05HbHVlRVpsYW05bWRuY0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDEuMDkyWiIsInB1ciI6ImJsb2Jfa2V5In19--7dee21f41bc01f0c26b4c0a91bbc9f0c296cc1d8", "filename"=>"bloodymary"}
+[36m  Disk Storage (3.4ms) [0m[34mDownloaded file from key: 2SBq9WTHSEFk1JjqSU1QwRHm[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+[36m  Disk Storage (2.6ms) [0m[34mDownloaded file from key: Sn48tVfsUqdYJ4inxFejofvw[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (1.0ms)
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+[36m  Disk Storage (7.6ms) [0m[34mDownloaded file from key: F6Wj1waMzwetYYrtq7Wf3HJM[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFDZG1GVVNrcElkblpsWkVkWVN6SlhjRXhYUzNWVU5EVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDEuMDc3WiIsInB1ciI6ImJsb2Jfa2V5In19--bbef507e0025854c595ad5e3fa580b4655c1c861/champagnepeachpunch.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22champagnepeachpunch.jpg%22%3B+filename%2A%3DUTF-8%27%27champagnepeachpunch.jpg" for 127.0.0.1 at 2018-08-06 19:52:41 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"champagnepeachpunch.jpg\"; filename*=UTF-8''champagnepeachpunch.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFDZG1GVVNrcElkblpsWkVkWVN6SlhjRXhYUzNWVU5EVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDEuMDc3WiIsInB1ciI6ImJsb2Jfa2V5In19--bbef507e0025854c595ad5e3fa580b4655c1c861", "filename"=>"champagnepeachpunch"}
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBWZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f7136cadc0e6e3837e34bd54fc8d986f0ec324c/chaitea.jpg" for 127.0.0.1 at 2018-08-06 19:52:41 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBWZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f7136cadc0e6e3837e34bd54fc8d986f0ec324c", "filename"=>"chaitea"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ /Users/sammyknight/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: Vse62gJKQAaPBmBh2YnJ9xBD (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFXYzJVMk1tZEtTMUZCWVZCQ2JVSm9NbGx1U2psNFFrUUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDEuMzE4WiIsInB1ciI6ImJsb2Jfa2V5In19--963638842bbbf874c91f8b652dabef6b1d783d2f/chaitea.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chaitea.jpg%22%3B+filename%2A%3DUTF-8%27%27chaitea.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFXYzJVMk1tZEtTMUZCWVZCQ2JVSm9NbGx1U2psNFFrUUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDEuMzE4WiIsInB1ciI6ImJsb2Jfa2V5In19--963638842bbbf874c91f8b652dabef6b1d783d2f/chaitea.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chaitea.jpg%22%3B+filename%2A%3DUTF-8%27%27chaitea.jpg
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+[36m  Disk Storage (14.8ms) [0m[34mDownloaded file from key: BvaTJJHvvedGXK2WpLWKuT45[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.9ms)
+Completed 200 OK in 17ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFXYzJVMk1tZEtTMUZCWVZCQ2JVSm9NbGx1U2psNFFrUUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDEuMzE4WiIsInB1ciI6ImJsb2Jfa2V5In19--963638842bbbf874c91f8b652dabef6b1d783d2f/chaitea.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chaitea.jpg%22%3B+filename%2A%3DUTF-8%27%27chaitea.jpg" for 127.0.0.1 at 2018-08-06 19:52:41 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"chaitea.jpg\"; filename*=UTF-8''chaitea.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFXYzJVMk1tZEtTMUZCWVZCQ2JVSm9NbGx1U2psNFFrUUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDEuMzE4WiIsInB1ciI6ImJsb2Jfa2V5In19--963638842bbbf874c91f8b652dabef6b1d783d2f", "filename"=>"chaitea"}
+[36m  Disk Storage (2.1ms) [0m[34mDownloaded file from key: Vse62gJKQAaPBmBh2YnJ9xBD[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.9ms)
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tag_recipes?tag_id=6" for 127.0.0.1 at 2018-08-06 19:52:43 -0400
+Processing by RecipesController#tag_recipes as HTML
+  Parameters: {"tag_id"=>"6"}
+  [1m[36mTag Load (1.4ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:19
+  [1m[36mRecipeTag Load (1.3ms)[0m  [1m[34mSELECT "recipe_tags".* FROM "recipe_tags"[0m
+  ↳ app/controllers/recipes_controller.rb:24
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:26
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:26
+  Rendering recipes/tag_recipes.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 7], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/recipes/tag_recipes.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/views/recipes/tag_recipes.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 19], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/recipes/tag_recipes.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/views/recipes/tag_recipes.html.erb:8
+  Rendered recipes/tag_recipes.html.erb within layouts/application (9.7ms)
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/layouts/_navbar.html.erb:13
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/layouts/_navbar.html.erb:26
+  Rendered layouts/_navbar.html.erb (8.4ms)
+Completed 200 OK in 148ms (Views: 108.0ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/path/to/font-awesome/css/font-awesome.min.css" for 127.0.0.1 at 2018-08-06 19:52:44 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBRUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--99360735871c025f9c5a050b27534a06710470ce/shrimpgrits.jpg" for 127.0.0.1 at 2018-08-06 19:52:44 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBRUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--99360735871c025f9c5a050b27534a06710470ce", "filename"=>"shrimpgrits"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ /Users/sammyknight/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: CXAY9ofpUf4mFYYVxAssL1Pk (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFEV0VGWk9XOW1jRlZtTkcxR1dWbFdlRUZ6YzB3eFVHc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDQuMTk0WiIsInB1ciI6ImJsb2Jfa2V5In19--7d308cf7fa76bb57dc7287d1c4ae5a97466decf0/shrimpgrits.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22shrimpgrits.jpg%22%3B+filename%2A%3DUTF-8%27%27shrimpgrits.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFEV0VGWk9XOW1jRlZtTkcxR1dWbFdlRUZ6YzB3eFVHc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDQuMTk0WiIsInB1ciI6ImJsb2Jfa2V5In19--7d308cf7fa76bb57dc7287d1c4ae5a97466decf0/shrimpgrits.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22shrimpgrits.jpg%22%3B+filename%2A%3DUTF-8%27%27shrimpgrits.jpg
+Completed 302 Found in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFEV0VGWk9XOW1jRlZtTkcxR1dWbFdlRUZ6YzB3eFVHc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDQuMTk0WiIsInB1ciI6ImJsb2Jfa2V5In19--7d308cf7fa76bb57dc7287d1c4ae5a97466decf0/shrimpgrits.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22shrimpgrits.jpg%22%3B+filename%2A%3DUTF-8%27%27shrimpgrits.jpg" for 127.0.0.1 at 2018-08-06 19:52:44 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBUUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--745d81c846080e08a1f12bebd5e16be0b373d900/jambalaya.jpg" for 127.0.0.1 at 2018-08-06 19:52:44 -0400
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"shrimpgrits.jpg\"; filename*=UTF-8''shrimpgrits.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFEV0VGWk9XOW1jRlZtTkcxR1dWbFdlRUZ6YzB3eFVHc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDQuMTk0WiIsInB1ciI6ImJsb2Jfa2V5In19--7d308cf7fa76bb57dc7287d1c4ae5a97466decf0", "filename"=>"shrimpgrits"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBUUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--745d81c846080e08a1f12bebd5e16be0b373d900", "filename"=>"jambalaya"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 72], ["LIMIT", 1]]
+[36m  Disk Storage (2.6ms) [0m[34mDownloaded file from key: CXAY9ofpUf4mFYYVxAssL1Pk[0m
+  ↳ /Users/sammyknight/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (87.5ms)
+Completed 200 OK in 92ms (Views: 87.2ms | ActiveRecord: 0.0ms)
+
+
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: H49sXDwK3Q7nEqiTjTsfgELp (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFJTkRseldFUjNTek5STjI1RmNXbFVhbFJ6Wm1kRlRIQUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDQuNTUzWiIsInB1ciI6ImJsb2Jfa2V5In19--48301e68845344864f68085880c8e93491928fae/jambalaya.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22jambalaya.jpg%22%3B+filename%2A%3DUTF-8%27%27jambalaya.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFJTkRseldFUjNTek5STjI1RmNXbFVhbFJ6Wm1kRlRIQUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDQuNTUzWiIsInB1ciI6ImJsb2Jfa2V5In19--48301e68845344864f68085880c8e93491928fae/jambalaya.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22jambalaya.jpg%22%3B+filename%2A%3DUTF-8%27%27jambalaya.jpg
+Completed 302 Found in 94ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFJTkRseldFUjNTek5STjI1RmNXbFVhbFJ6Wm1kRlRIQUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDQuNTUzWiIsInB1ciI6ImJsb2Jfa2V5In19--48301e68845344864f68085880c8e93491928fae/jambalaya.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22jambalaya.jpg%22%3B+filename%2A%3DUTF-8%27%27jambalaya.jpg" for 127.0.0.1 at 2018-08-06 19:52:44 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"jambalaya.jpg\"; filename*=UTF-8''jambalaya.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFJTkRseldFUjNTek5STjI1RmNXbFVhbFJ6Wm1kRlRIQUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTc6NDQuNTUzWiIsInB1ciI6ImJsb2Jfa2V5In19--48301e68845344864f68085880c8e93491928fae", "filename"=>"jambalaya"}
+[36m  Disk Storage (56.1ms) [0m[34mDownloaded file from key: H49sXDwK3Q7nEqiTjTsfgELp[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 88ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-06 19:52:55 -0400
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:9
+  Rendered categories/index.html.erb within layouts/application (15.3ms)
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/layouts/_navbar.html.erb:26
+  Rendered layouts/_navbar.html.erb (7.5ms)
+Completed 200 OK in 92ms (Views: 88.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/path/to/font-awesome/css/font-awesome.min.css" for 127.0.0.1 at 2018-08-06 19:52:55 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-08-06 19:57:30 -0400
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/sammyknight/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:9
+  Rendered categories/index.html.erb within layouts/application (602.8ms)
+  [1m[36mTag Load (1.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/layouts/_navbar.html.erb:26
+  Rendered layouts/_navbar.html.erb (15.5ms)
+Completed 200 OK in 858ms (Views: 822.6ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/path/to/font-awesome/css/font-awesome.min.css" for 127.0.0.1 at 2018-08-06 19:57:32 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/categorical?cat_id=4" for 127.0.0.1 at 2018-08-06 19:57:34 -0400
+Processing by CategoriesController#recipes_by_category as HTML
+  Parameters: {"cat_id"=>"4"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:56
+  [1m[36mRecipe Load (2.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/categories_controller.rb:60
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  Rendering categories/recipes_by_category.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Blob Load (1.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 66], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 15], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 16], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 17], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 70], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 18], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  Rendered categories/recipes_by_category.html.erb within layouts/application (122.7ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/layouts/_navbar.html.erb:13
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/layouts/_navbar.html.erb:26
+  Rendered layouts/_navbar.html.erb (6.0ms)
+Completed 200 OK in 284ms (Views: 191.3ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/path/to/font-awesome/css/font-awesome.min.css" for 127.0.0.1 at 2018-08-06 19:57:34 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDE0YWpsYWNVSm1WV2R5TXpOWVRtTkdTblp5YjNCUlRVVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTk6NTIuODYyWiIsInB1ciI6ImJsb2Jfa2V5In19--683c743e1f4f698bf0a998769aef2da28156a9ef/keylimepie.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22keylimepie.jpg%22%3B+filename%2A%3DUTF-8%27%27keylimepie.jpg" for 127.0.0.1 at 2018-08-06 19:57:34 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFCT1RKRlJtOW1kMjE2UlVjM1VuRjZaMU5TVVdrM2QySUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTk6NTIuODY4WiIsInB1ciI6ImJsb2Jfa2V5In19--0c607357aed4cac2455e4ec19de34eae297806af/carrotcake.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22carrotcake.jpg%22%3B+filename%2A%3DUTF-8%27%27carrotcake.jpg" for 127.0.0.1 at 2018-08-06 19:57:35 -0400
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDA1YmpkTk5sRnphbE53Vms1U1lVdFRlVEpWUVhodFRtc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTk6NTIuODY3WiIsInB1ciI6ImJsb2Jfa2V5In19--7f1ae6415c880774b34bacf36afee8c00962530d/chocolatechipcookies.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chocolatechipcookies.jpg%22%3B+filename%2A%3DUTF-8%27%27chocolatechipcookies.jpg" for 127.0.0.1 at 2018-08-06 19:57:35 -0400
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFyU0ZWblEwTkJRM2N6UTFVeVExaFhVR1p4Y2xsRFFVZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTk6NTIuODczWiIsInB1ciI6ImJsb2Jfa2V5In19--4043af45cc6046db753a213ee1993defc5d44b07/bananapudding.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22bananapudding.jpg%22%3B+filename%2A%3DUTF-8%27%27bananapudding.jpg" for 127.0.0.1 at 2018-08-06 19:57:35 -0400
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"keylimepie.jpg\"; filename*=UTF-8''keylimepie.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDE0YWpsYWNVSm1WV2R5TXpOWVRtTkdTblp5YjNCUlRVVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTk6NTIuODYyWiIsInB1ciI6ImJsb2Jfa2V5In19--683c743e1f4f698bf0a998769aef2da28156a9ef", "filename"=>"keylimepie"}
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"carrotcake.jpg\"; filename*=UTF-8''carrotcake.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFCT1RKRlJtOW1kMjE2UlVjM1VuRjZaMU5TVVdrM2QySUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTk6NTIuODY4WiIsInB1ciI6ImJsb2Jfa2V5In19--0c607357aed4cac2455e4ec19de34eae297806af", "filename"=>"carrotcake"}
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"chocolatechipcookies.jpg\"; filename*=UTF-8''chocolatechipcookies.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDA1YmpkTk5sRnphbE53Vms1U1lVdFRlVEpWUVhodFRtc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTk6NTIuODY3WiIsInB1ciI6ImJsb2Jfa2V5In19--7f1ae6415c880774b34bacf36afee8c00962530d", "filename"=>"chocolatechipcookies"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDAzUjNKU1Z6YzRlV05YYlhSck0zUnZRbk5WVWpGcldsVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTk6NTIuODc4WiIsInB1ciI6ImJsb2Jfa2V5In19--aa71fd93cc44c4f433c8198873059add6038f77a/applepie.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22applepie.jpg%22%3B+filename%2A%3DUTF-8%27%27applepie.jpg" for 127.0.0.1 at 2018-08-06 19:57:35 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"applepie.jpg\"; filename*=UTF-8''applepie.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDAzUjNKU1Z6YzRlV05YYlhSck0zUnZRbk5WVWpGcldsVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTk6NTIuODc4WiIsInB1ciI6ImJsb2Jfa2V5In19--aa71fd93cc44c4f433c8198873059add6038f77a", "filename"=>"applepie"}
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"bananapudding.jpg\"; filename*=UTF-8''bananapudding.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFyU0ZWblEwTkJRM2N6UTFVeVExaFhVR1p4Y2xsRFFVZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTk6NTIuODczWiIsInB1ciI6ImJsb2Jfa2V5In19--4043af45cc6046db753a213ee1993defc5d44b07", "filename"=>"bananapudding"}
+[36m  Disk Storage (2.2ms) [0m[34mDownloaded file from key: 9n7M6QsjSpVNRaKSy2UAxmNk[0m
+[36m  Disk Storage (1.5ms) [0m[34mDownloaded file from key: 7GrRW78ycWmtk3toBsUR1kZU[0m
+[36m  Disk Storage (2.4ms) [0m[34mDownloaded file from key: A92EFofwmzEG7RqzgSRQi7wb[0m
+[36m  Disk Storage (3.1ms) [0m[34mDownloaded file from key: xj9ZqBfUgr33XNcFJvropQME[0m
+  Rendering text template
+  Rendering text template
+  Rendering text template
+  Rendered text template (0.0ms)
+  Rendered text template (0.0ms)
+  Rendered text template (0.0ms)
+  Rendering text template
+Sent data  (1.7ms)
+Sent data  (5.6ms)
+Sent data  (2.7ms)
+  Rendered text template (0.0ms)
+Completed 200 OK in 30ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 29ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 17ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Sent data  (3.0ms)
+Completed 200 OK in 38ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+
+
+[36m  Disk Storage (15.6ms) [0m[34mDownloaded file from key: kHUgCCACw3CU2CXWPfqrYCAH[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (1.6ms)
+Completed 200 OK in 27ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFRWm0xWGEwRTNPRmR2WVROMGEwRkZUalpGUkV0ek5EUUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTk6NTMuMDk1WiIsInB1ciI6ImJsb2Jfa2V5In19--65d5b8d47498fcf136ddc62b1eb1d79284fcb5b8/lemonbar.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22lemonbar.jpg%22%3B+filename%2A%3DUTF-8%27%27lemonbar.jpg" for 127.0.0.1 at 2018-08-06 19:57:35 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"lemonbar.jpg\"; filename*=UTF-8''lemonbar.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFRWm0xWGEwRTNPRmR2WVROMGEwRkZUalpGUkV0ek5EUUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTk6NTMuMDk1WiIsInB1ciI6ImJsb2Jfa2V5In19--65d5b8d47498fcf136ddc62b1eb1d79284fcb5b8", "filename"=>"lemonbar"}
+[36m  Disk Storage (1.3ms) [0m[34mDownloaded file from key: PfmWkA78Woa3tkAEN6EDKs44[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.5ms)
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-06 19:57:49 -0400
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:9
+  Rendered categories/index.html.erb within layouts/application (22.4ms)
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/layouts/_navbar.html.erb:26
+  Rendered layouts/_navbar.html.erb (8.7ms)
+Completed 200 OK in 149ms (Views: 144.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/path/to/font-awesome/css/font-awesome.min.css" for 127.0.0.1 at 2018-08-06 19:57:49 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/categorical?cat_id=4" for 127.0.0.1 at 2018-08-06 19:57:51 -0400
+Processing by CategoriesController#recipes_by_category as HTML
+  Parameters: {"cat_id"=>"4"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:56
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/categories_controller.rb:60
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  Rendering categories/recipes_by_category.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 66], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 15], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 16], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 17], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 70], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 18], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  Rendered categories/recipes_by_category.html.erb within layouts/application (42.1ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/layouts/_navbar.html.erb:13
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/layouts/_navbar.html.erb:26
+  Rendered layouts/_navbar.html.erb (8.5ms)
+Completed 200 OK in 166ms (Views: 117.8ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/path/to/font-awesome/css/font-awesome.min.css" for 127.0.0.1 at 2018-08-06 19:57:51 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDE0YWpsYWNVSm1WV2R5TXpOWVRtTkdTblp5YjNCUlRVVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTk6NTIuODYyWiIsInB1ciI6ImJsb2Jfa2V5In19--683c743e1f4f698bf0a998769aef2da28156a9ef/keylimepie.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22keylimepie.jpg%22%3B+filename%2A%3DUTF-8%27%27keylimepie.jpg" for 127.0.0.1 at 2018-08-06 19:57:51 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"keylimepie.jpg\"; filename*=UTF-8''keylimepie.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDE0YWpsYWNVSm1WV2R5TXpOWVRtTkdTblp5YjNCUlRVVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTk6NTIuODYyWiIsInB1ciI6ImJsb2Jfa2V5In19--683c743e1f4f698bf0a998769aef2da28156a9ef", "filename"=>"keylimepie"}
+[36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: xj9ZqBfUgr33XNcFJvropQME[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (59.4ms)
+Completed 200 OK in 61ms (Views: 59.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDA1YmpkTk5sRnphbE53Vms1U1lVdFRlVEpWUVhodFRtc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTk6NTIuODY3WiIsInB1ciI6ImJsb2Jfa2V5In19--7f1ae6415c880774b34bacf36afee8c00962530d/chocolatechipcookies.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chocolatechipcookies.jpg%22%3B+filename%2A%3DUTF-8%27%27chocolatechipcookies.jpg" for 127.0.0.1 at 2018-08-06 19:57:52 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFRWm0xWGEwRTNPRmR2WVROMGEwRkZUalpGUkV0ek5EUUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTk6NTMuMDk1WiIsInB1ciI6ImJsb2Jfa2V5In19--65d5b8d47498fcf136ddc62b1eb1d79284fcb5b8/lemonbar.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22lemonbar.jpg%22%3B+filename%2A%3DUTF-8%27%27lemonbar.jpg" for 127.0.0.1 at 2018-08-06 19:57:52 -0400
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFCT1RKRlJtOW1kMjE2UlVjM1VuRjZaMU5TVVdrM2QySUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTk6NTIuODY4WiIsInB1ciI6ImJsb2Jfa2V5In19--0c607357aed4cac2455e4ec19de34eae297806af/carrotcake.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22carrotcake.jpg%22%3B+filename%2A%3DUTF-8%27%27carrotcake.jpg" for 127.0.0.1 at 2018-08-06 19:57:52 -0400
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"chocolatechipcookies.jpg\"; filename*=UTF-8''chocolatechipcookies.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDA1YmpkTk5sRnphbE53Vms1U1lVdFRlVEpWUVhodFRtc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTk6NTIuODY3WiIsInB1ciI6ImJsb2Jfa2V5In19--7f1ae6415c880774b34bacf36afee8c00962530d", "filename"=>"chocolatechipcookies"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDAzUjNKU1Z6YzRlV05YYlhSck0zUnZRbk5WVWpGcldsVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTk6NTIuODc4WiIsInB1ciI6ImJsb2Jfa2V5In19--aa71fd93cc44c4f433c8198873059add6038f77a/applepie.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22applepie.jpg%22%3B+filename%2A%3DUTF-8%27%27applepie.jpg" for 127.0.0.1 at 2018-08-06 19:57:52 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+[36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: 9n7M6QsjSpVNRaKSy2UAxmNk[0m
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"lemonbar.jpg\"; filename*=UTF-8''lemonbar.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFRWm0xWGEwRTNPRmR2WVROMGEwRkZUalpGUkV0ek5EUUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTk6NTMuMDk1WiIsInB1ciI6ImJsb2Jfa2V5In19--65d5b8d47498fcf136ddc62b1eb1d79284fcb5b8", "filename"=>"lemonbar"}
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"carrotcake.jpg\"; filename*=UTF-8''carrotcake.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFCT1RKRlJtOW1kMjE2UlVjM1VuRjZaMU5TVVdrM2QySUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTk6NTIuODY4WiIsInB1ciI6ImJsb2Jfa2V5In19--0c607357aed4cac2455e4ec19de34eae297806af", "filename"=>"carrotcake"}
+  Rendering text template
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"applepie.jpg\"; filename*=UTF-8''applepie.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDAzUjNKU1Z6YzRlV05YYlhSck0zUnZRbk5WVWpGcldsVUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTk6NTIuODc4WiIsInB1ciI6ImJsb2Jfa2V5In19--aa71fd93cc44c4f433c8198873059add6038f77a", "filename"=>"applepie"}
+[36m  Disk Storage (1.8ms) [0m[34mDownloaded file from key: PfmWkA78Woa3tkAEN6EDKs44[0m
+  Rendered text template (0.0ms)
+[36m  Disk Storage (1.1ms) [0m[34mDownloaded file from key: A92EFofwmzEG7RqzgSRQi7wb[0m
+[36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: 7GrRW78ycWmtk3toBsUR1kZU[0m
+  Rendering text template
+Sent data  (69.2ms)
+  Rendering text template
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (42.1ms)
+Completed 200 OK in 108ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+  Rendered text template (0.1ms)
+Sent data  (108.0ms)
+Completed 200 OK in 114ms (Views: 107.8ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 217ms (Views: 68.9ms | ActiveRecord: 0.0ms)
+
+
+  Rendered text template (0.0ms)
+Sent data  (48.4ms)
+Completed 200 OK in 116ms (Views: 48.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFyU0ZWblEwTkJRM2N6UTFVeVExaFhVR1p4Y2xsRFFVZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTk6NTIuODczWiIsInB1ciI6ImJsb2Jfa2V5In19--4043af45cc6046db753a213ee1993defc5d44b07/bananapudding.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22bananapudding.jpg%22%3B+filename%2A%3DUTF-8%27%27bananapudding.jpg" for 127.0.0.1 at 2018-08-06 19:57:52 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"bananapudding.jpg\"; filename*=UTF-8''bananapudding.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFyU0ZWblEwTkJRM2N6UTFVeVExaFhVR1p4Y2xsRFFVZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDZUMjM6NTk6NTIuODczWiIsInB1ciI6ImJsb2Jfa2V5In19--4043af45cc6046db753a213ee1993defc5d44b07", "filename"=>"bananapudding"}
+[36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: kHUgCCACw3CU2CXWPfqrYCAH[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.8ms)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categorical?cat_id=3" for 127.0.0.1 at 2018-08-06 19:57:56 -0400
+Processing by CategoriesController#recipes_by_category as HTML
+  Parameters: {"cat_id"=>"3"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:56
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/categories_controller.rb:60
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:61
+  Rendering categories/recipes_by_category.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 7], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 8], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 61], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 64], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Recipe"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/views/categories/recipes_by_category.html.erb:8
+  Rendered categories/recipes_by_category.html.erb within layouts/application (28.3ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/layouts/_navbar.html.erb:13
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/layouts/_navbar.html.erb:26
+  Rendered layouts/_navbar.html.erb (9.9ms)
+Completed 200 OK in 163ms (Views: 112.4ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/path/to/font-awesome/css/font-awesome.min.css" for 127.0.0.1 at 2018-08-06 19:57:56 -0400
+  
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBRUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--99360735871c025f9c5a050b27534a06710470ce/shrimpgrits.jpg" for 127.0.0.1 at 2018-08-06 19:57:56 -0400
+ActionController::RoutingError (No route matches [GET] "/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBRUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--99360735871c025f9c5a050b27534a06710470ce", "filename"=>"shrimpgrits"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBRdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--cfe0f37843921978ec36202bc1f2faf630e5174e/zucchinibread.jpg" for 127.0.0.1 at 2018-08-06 19:57:57 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBRZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f265a80ca7bb15e6262a7155c6321278e6ae9edc/quiche.jpg" for 127.0.0.1 at 2018-08-06 19:57:57 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--830946e8005c0c99c16d9a6dcfff8edac0f461a4/overnightoatmeal.jpg" for 127.0.0.1 at 2018-08-06 19:57:57 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--85ae1bc627366cd6946521e86d89eb6b5260c9a5/acaibowl.jpg" for 127.0.0.1 at 2018-08-06 19:57:57 -0400
+  ↳ /Users/sammyknight/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBRdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--cfe0f37843921978ec36202bc1f2faf630e5174e", "filename"=>"zucchinibread"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  ↳ /Users/sammyknight/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: rGwxKbYGJEqsDCMYv9bTqXCV (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF5UjNkNFMySlpSMHBGY1hORVEwMVpkamxpVkhGWVExWUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDdUMDA6MDI6NTcuMzAwWiIsInB1ciI6ImJsb2Jfa2V5In19--52cb01486915551454c89ce9c3c3624021515caa/zucchinibread.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22zucchinibread.jpg%22%3B+filename%2A%3DUTF-8%27%27zucchinibread.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF5UjNkNFMySlpSMHBGY1hORVEwMVpkamxpVkhGWVExWUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDdUMDA6MDI6NTcuMzAwWiIsInB1ciI6ImJsb2Jfa2V5In19--52cb01486915551454c89ce9c3c3624021515caa/zucchinibread.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22zucchinibread.jpg%22%3B+filename%2A%3DUTF-8%27%27zucchinibread.jpg
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBRZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f265a80ca7bb15e6262a7155c6321278e6ae9edc", "filename"=>"quiche"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 61], ["LIMIT", 1]]
+  ↳ /Users/sammyknight/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--830946e8005c0c99c16d9a6dcfff8edac0f461a4", "filename"=>"overnightoatmeal"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+[36m  Disk Storage (7.4ms) [0m[34mGenerated URL for file at key: CXAY9ofpUf4mFYYVxAssL1Pk (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFEV0VGWk9XOW1jRlZtTkcxR1dWbFdlRUZ6YzB3eFVHc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDdUMDA6MDI6NTcuMjkwWiIsInB1ciI6ImJsb2Jfa2V5In19--3605238d1e9e7af4e2e722583152fc689b081f6e/shrimpgrits.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22shrimpgrits.jpg%22%3B+filename%2A%3DUTF-8%27%27shrimpgrits.jpg)[0m
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: PTecLoDpsFDSQ2dtmfYQjheg (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFRVkdWalRHOUVjSE5HUkZOUk1tUjBiV1paVVdwb1pXY0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDdUMDA6MDI6NTcuMzA3WiIsInB1ciI6ImJsb2Jfa2V5In19--ca17a1f16000def52e22cd6c6d42f80f20a82d3f/quiche.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22quiche.jpg%22%3B+filename%2A%3DUTF-8%27%27quiche.jpg)[0m
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9ba213dd55185d846e3280cdfb240bb78de211f8/french%20toast.jpg" for 127.0.0.1 at 2018-08-06 19:57:57 -0400
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--85ae1bc627366cd6946521e86d89eb6b5260c9a5", "filename"=>"acaibowl"}
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFEV0VGWk9XOW1jRlZtTkcxR1dWbFdlRUZ6YzB3eFVHc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDdUMDA6MDI6NTcuMjkwWiIsInB1ciI6ImJsb2Jfa2V5In19--3605238d1e9e7af4e2e722583152fc689b081f6e/shrimpgrits.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22shrimpgrits.jpg%22%3B+filename%2A%3DUTF-8%27%27shrimpgrits.jpg
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFRVkdWalRHOUVjSE5HUkZOUk1tUjBiV1paVVdwb1pXY0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDdUMDA6MDI6NTcuMzA3WiIsInB1ciI6ImJsb2Jfa2V5In19--ca17a1f16000def52e22cd6c6d42f80f20a82d3f/quiche.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22quiche.jpg%22%3B+filename%2A%3DUTF-8%27%27quiche.jpg
+  ↳ /Users/sammyknight/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9ba213dd55185d846e3280cdfb240bb78de211f8", "filename"=>"french toast"}
+Completed 302 Found in 65ms (ActiveRecord: 0.4ms)
+
+
+Completed 302 Found in 18ms (ActiveRecord: 0.4ms)
+
+
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: seM3Cs9ELbcnBRvsApUn639P (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF6WlUwelEzTTVSVXhpWTI1Q1VuWnpRWEJWYmpZek9WQUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDdUMDA6MDI6NTcuMzIyWiIsInB1ciI6ImJsb2Jfa2V5In19--bf474607446288c6911675dfd7c2b15223ba170d/overnightoatmeal.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22overnightoatmeal.jpg%22%3B+filename%2A%3DUTF-8%27%27overnightoatmeal.jpg)[0m
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 65], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 64], ["LIMIT", 1]]
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF6WlUwelEzTTVSVXhpWTI1Q1VuWnpRWEJWYmpZek9WQUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDdUMDA6MDI6NTcuMzIyWiIsInB1ciI6ImJsb2Jfa2V5In19--bf474607446288c6911675dfd7c2b15223ba170d/overnightoatmeal.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22overnightoatmeal.jpg%22%3B+filename%2A%3DUTF-8%27%27overnightoatmeal.jpg
+  ↳ /Users/sammyknight/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/sammyknight/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 302 Found in 20ms (ActiveRecord: 0.2ms)
+
+
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: v4k9ZkD6J5bgVvDjSp6fHZ7c (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEyTkdzNVdtdEVOa28xWW1kV2RrUnFVM0EyWmtoYU4yTUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDdUMDA6MDI6NTcuMzI5WiIsInB1ciI6ImJsb2Jfa2V5In19--2f9ef49127fd278c963d56ef3d62b28879c97a0f/acaibowl.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22acaibowl.jpg%22%3B+filename%2A%3DUTF-8%27%27acaibowl.jpg)[0m
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: uuN79JtMskLnTh9qbTrjME1a (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDExZFU0M09VcDBUWE5yVEc1VWFEbHhZbFJ5YWsxRk1XRUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDdUMDA6MDI6NTcuMzMwWiIsInB1ciI6ImJsb2Jfa2V5In19--7ffa18eafc3ae5496086d56fd777613c4bf7c5cf/french%20toast.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22french+toast.jpg%22%3B+filename%2A%3DUTF-8%27%27french%2520toast.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEyTkdzNVdtdEVOa28xWW1kV2RrUnFVM0EyWmtoYU4yTUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDdUMDA6MDI6NTcuMzI5WiIsInB1ciI6ImJsb2Jfa2V5In19--2f9ef49127fd278c963d56ef3d62b28879c97a0f/acaibowl.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22acaibowl.jpg%22%3B+filename%2A%3DUTF-8%27%27acaibowl.jpg
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDExZFU0M09VcDBUWE5yVEc1VWFEbHhZbFJ5YWsxRk1XRUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDdUMDA6MDI6NTcuMzMwWiIsInB1ciI6ImJsb2Jfa2V5In19--7ffa18eafc3ae5496086d56fd777613c4bf7c5cf/french%20toast.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22french+toast.jpg%22%3B+filename%2A%3DUTF-8%27%27french%2520toast.jpg
+Completed 302 Found in 13ms (ActiveRecord: 0.3ms)
+
+
+Completed 302 Found in 10ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF5UjNkNFMySlpSMHBGY1hORVEwMVpkamxpVkhGWVExWUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDdUMDA6MDI6NTcuMzAwWiIsInB1ciI6ImJsb2Jfa2V5In19--52cb01486915551454c89ce9c3c3624021515caa/zucchinibread.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22zucchinibread.jpg%22%3B+filename%2A%3DUTF-8%27%27zucchinibread.jpg" for 127.0.0.1 at 2018-08-06 19:57:57 -0400
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFRVkdWalRHOUVjSE5HUkZOUk1tUjBiV1paVVdwb1pXY0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDdUMDA6MDI6NTcuMzA3WiIsInB1ciI6ImJsb2Jfa2V5In19--ca17a1f16000def52e22cd6c6d42f80f20a82d3f/quiche.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22quiche.jpg%22%3B+filename%2A%3DUTF-8%27%27quiche.jpg" for 127.0.0.1 at 2018-08-06 19:57:57 -0400
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF6WlUwelEzTTVSVXhpWTI1Q1VuWnpRWEJWYmpZek9WQUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDdUMDA6MDI6NTcuMzIyWiIsInB1ciI6ImJsb2Jfa2V5In19--bf474607446288c6911675dfd7c2b15223ba170d/overnightoatmeal.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22overnightoatmeal.jpg%22%3B+filename%2A%3DUTF-8%27%27overnightoatmeal.jpg" for 127.0.0.1 at 2018-08-06 19:57:57 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEyTkdzNVdtdEVOa28xWW1kV2RrUnFVM0EyWmtoYU4yTUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDdUMDA6MDI6NTcuMzI5WiIsInB1ciI6ImJsb2Jfa2V5In19--2f9ef49127fd278c963d56ef3d62b28879c97a0f/acaibowl.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22acaibowl.jpg%22%3B+filename%2A%3DUTF-8%27%27acaibowl.jpg" for 127.0.0.1 at 2018-08-06 19:57:57 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"quiche.jpg\"; filename*=UTF-8''quiche.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFRVkdWalRHOUVjSE5HUkZOUk1tUjBiV1paVVdwb1pXY0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDdUMDA6MDI6NTcuMzA3WiIsInB1ciI6ImJsb2Jfa2V5In19--ca17a1f16000def52e22cd6c6d42f80f20a82d3f", "filename"=>"quiche"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFEV0VGWk9XOW1jRlZtTkcxR1dWbFdlRUZ6YzB3eFVHc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDdUMDA6MDI6NTcuMjkwWiIsInB1ciI6ImJsb2Jfa2V5In19--3605238d1e9e7af4e2e722583152fc689b081f6e/shrimpgrits.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22shrimpgrits.jpg%22%3B+filename%2A%3DUTF-8%27%27shrimpgrits.jpg" for 127.0.0.1 at 2018-08-06 19:57:57 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"overnightoatmeal.jpg\"; filename*=UTF-8''overnightoatmeal.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF6WlUwelEzTTVSVXhpWTI1Q1VuWnpRWEJWYmpZek9WQUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDdUMDA6MDI6NTcuMzIyWiIsInB1ciI6ImJsb2Jfa2V5In19--bf474607446288c6911675dfd7c2b15223ba170d", "filename"=>"overnightoatmeal"}
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"zucchinibread.jpg\"; filename*=UTF-8''zucchinibread.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF5UjNkNFMySlpSMHBGY1hORVEwMVpkamxpVkhGWVExWUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDdUMDA6MDI6NTcuMzAwWiIsInB1ciI6ImJsb2Jfa2V5In19--52cb01486915551454c89ce9c3c3624021515caa", "filename"=>"zucchinibread"}
+Processing by ActiveStorage::DiskController#show as JPEG
+[36m  Disk Storage (8.0ms) [0m[34mDownloaded file from key: PTecLoDpsFDSQ2dtmfYQjheg[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+[36m  Disk Storage (1.9ms) [0m[34mDownloaded file from key: seM3Cs9ELbcnBRvsApUn639P[0m
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"acaibowl.jpg\"; filename*=UTF-8''acaibowl.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDEyTkdzNVdtdEVOa28xWW1kV2RrUnFVM0EyWmtoYU4yTUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDdUMDA6MDI6NTcuMzI5WiIsInB1ciI6ImJsb2Jfa2V5In19--2f9ef49127fd278c963d56ef3d62b28879c97a0f", "filename"=>"acaibowl"}
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"shrimpgrits.jpg\"; filename*=UTF-8''shrimpgrits.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFEV0VGWk9XOW1jRlZtTkcxR1dWbFdlRUZ6YzB3eFVHc0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDdUMDA6MDI6NTcuMjkwWiIsInB1ciI6ImJsb2Jfa2V5In19--3605238d1e9e7af4e2e722583152fc689b081f6e", "filename"=>"shrimpgrits"}
+Sent data  (0.8ms)
+[36m  Disk Storage (1.5ms) [0m[34mDownloaded file from key: rGwxKbYGJEqsDCMYv9bTqXCV[0m
+  Rendering text template
+Completed 200 OK in 17ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+[36m  Disk Storage (1.8ms) [0m[34mDownloaded file from key: v4k9ZkD6J5bgVvDjSp6fHZ7c[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (7.3ms)
+Completed 200 OK in 12ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+[36m  Disk Storage (3.2ms) [0m[34mDownloaded file from key: CXAY9ofpUf4mFYYVxAssL1Pk[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (3.6ms)
+Completed 200 OK in 10ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (9.0ms)
+Completed 200 OK in 15ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+  Rendered text template (0.0ms)
+Sent data  (4.9ms)
+Completed 200 OK in 13ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDExZFU0M09VcDBUWE5yVEc1VWFEbHhZbFJ5YWsxRk1XRUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDdUMDA6MDI6NTcuMzMwWiIsInB1ciI6ImJsb2Jfa2V5In19--7ffa18eafc3ae5496086d56fd777613c4bf7c5cf/french%20toast.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22french+toast.jpg%22%3B+filename%2A%3DUTF-8%27%27french%2520toast.jpg" for 127.0.0.1 at 2018-08-06 19:57:57 -0400
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"french toast.jpg\"; filename*=UTF-8''french%20toast.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDExZFU0M09VcDBUWE5yVEc1VWFEbHhZbFJ5YWsxRk1XRUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDgtMDdUMDA6MDI6NTcuMzMwWiIsInB1ciI6ImJsb2Jfa2V5In19--7ffa18eafc3ae5496086d56fd777613c4bf7c5cf", "filename"=>"french toast"}
+[36m  Disk Storage (1.3ms) [0m[34mDownloaded file from key: uuN79JtMskLnTh9qbTrjME1a[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
